@@ -1,0 +1,13 @@
+{
+  "name": "surface-voice-triage",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Workspace root for the cockpit engine + voice-annotation libraries and the in-repo composition example.",
+  "type": "module",
+  "scripts": {
+    "build:libs": "pnpm --filter @surface/cockpit build && pnpm --filter @surface/cockpit-ui build && pnpm --filter @surface-voice-triage/voice build",
+    "test": "pnpm --filter @surface-voice-triage/voice test && pnpm --filter @surface-voice-triage/composition test",
+    "check": "pnpm -r typecheck && pnpm test"
+  },
+  "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
+}

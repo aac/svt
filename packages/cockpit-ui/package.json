@@ -1,0 +1,40 @@
+{
+  "name": "@surface/cockpit-ui",
+  "version": "0.1.0",
+  "description": "Default presentational display for the cockpit triage engine — pre-styled two-pane list+detail, additive slots, and a <Chip> primitive. Owns all styling; consumes @surface/cockpit.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "prebuild": "pnpm --filter @surface/cockpit build",
+    "pretypecheck": "pnpm --filter @surface/cockpit build",
+    "typecheck": "tsc --noEmit",
+    "demo": "vite --config vite.demo.config.ts"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@surface/cockpit": "file:../cockpit",
+    "dompurify": "^3.2.6"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.0.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.3.5"
+  }
+}

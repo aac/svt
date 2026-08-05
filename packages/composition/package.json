@@ -1,0 +1,37 @@
+{
+  "name": "@surface-voice-triage/composition",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Prototype surface page composing the cockpit + voice libraries via a manifest. Validates the libraries[] + wiring[] shape and the per-item-grouping drain.",
+  "type": "module",
+  "scripts": {
+    "build:libs": "pnpm --filter @surface/cockpit build && pnpm --filter @surface/cockpit-ui build && pnpm --filter @surface-voice-triage/voice build",
+    "predemo": "pnpm build:libs",
+    "demo": "vite",
+    "pretriage": "pnpm build:libs",
+    "triage": "vite",
+    "prebuild": "pnpm build:libs",
+    "build": "vite build",
+    "pretypecheck": "pnpm build:libs",
+    "typecheck": "tsc --noEmit",
+    "pretest": "pnpm build:libs",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@surface-voice-triage/voice": "workspace:*",
+    "@surface/cockpit": "workspace:*",
+    "@surface/cockpit-ui": "workspace:*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.3.5",
+    "vitest": "^1.6.0"
+  },
+  "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
+}

@@ -1,0 +1,5 @@
+# Dev-server journals — local session data, never committed. Both default here
+# and are env-overridable:
+#   submit-journal.jsonl  (SUBMIT_JOURNAL)       — accepted surface submissions
+#   voice-usage.jsonl     (VOICE_USAGE_JOURNAL)  — voice usage/cost rows
+.data/

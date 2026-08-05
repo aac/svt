@@ -1,0 +1,17 @@
+.act/
+.ask/
+.claude/
+
+# Operator-workflow artifacts — not part of the product
+docs/session-handoff.md
+docs/internal/
+node_modules/
+dist/
+dist-demo/
+.playwright-mcp/
+.DS_Store
+
+# Local, gitignored dogfood example manifests (may embed personal data — see
+# manifest.examples.ts's import.meta.glob seam). Never committed; CI/fresh clones
+# simply don't have them and the composition page falls back to the built-ins.
+*.local.ts

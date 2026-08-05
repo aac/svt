@@ -1,0 +1,32 @@
+{
+  "name": "@surface/cockpit",
+  "version": "0.1.0",
+  "description": "Headless triage engine — list state, selection, keyboard nav, action dispatch, and the focused-item bus. Pixels live in @surface/cockpit-ui.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./bus": {
+      "types": "./dist/bus.d.ts",
+      "import": "./dist/bus.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.3"
+  }
+}
