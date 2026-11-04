@@ -35,7 +35,7 @@
     "@testing-library/react": "^16.1.0",
     "@types/node": "^18.19.130",
     "@types/react": "^19.0.0",
-    "happy-dom": "^15.11.7",
+    "happy-dom": "^21.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "typescript": "^5.4.0",
